@@ -698,6 +698,7 @@ type MarginAccount struct {
 	TotalLiabilityOfBTC        string      `json:"totalLiabilityOfBtc"`
 	TotalNetAssetOfBTC         string      `json:"totalNetAssetOfBtc"`
 	TotalCollateralValueInUSDT string      `json:"totalCollateralValueInUSDT"`
+	TransferEnabled            bool        `json:"transferEnabled"`
 	TradeEnabled               bool        `json:"tradeEnabled"`
 	TransferInEnabled          bool        `json:"transferInEnabled"`
 	TransferOutEnabled         bool        `json:"transferOutEnabled"`

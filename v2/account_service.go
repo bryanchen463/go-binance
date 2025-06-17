@@ -44,19 +44,22 @@ func (s *GetAccountService) Do(ctx context.Context, opts ...RequestOption) (res 
 
 // Account define account info
 type Account struct {
-	MakerCommission  int64           `json:"makerCommission"`
-	TakerCommission  int64           `json:"takerCommission"`
-	BuyerCommission  int64           `json:"buyerCommission"`
-	SellerCommission int64           `json:"sellerCommission"`
-	CommissionRates  CommissionRates `json:"commissionRates"`
-	CanTrade         bool            `json:"canTrade"`
-	CanWithdraw      bool            `json:"canWithdraw"`
-	CanDeposit       bool            `json:"canDeposit"`
-	UpdateTime       uint64          `json:"updateTime"`
-	AccountType      string          `json:"accountType"`
-	Balances         []Balance       `json:"balances"`
-	Permissions      []string        `json:"permissions"`
-	UID              int64           `json:"uid"`
+	MakerCommission            int64           `json:"makerCommission"`
+	TakerCommission            int64           `json:"takerCommission"`
+	BuyerCommission            int64           `json:"buyerCommission"`
+	SellerCommission           int64           `json:"sellerCommission"`
+	CommissionRates            CommissionRates `json:"commissionRates"`
+	CanTrade                   bool            `json:"canTrade"`
+	CanWithdraw                bool            `json:"canWithdraw"`
+	CanDeposit                 bool            `json:"canDeposit"`
+	UpdateTime                 uint64          `json:"updateTime"`
+	AccountType                string          `json:"accountType"`
+	Balances                   []Balance       `json:"balances"`
+	Permissions                []string        `json:"permissions"`
+	UID                        int64           `json:"uid"`
+	RequireSelfTradePrevention bool            `json:"requireSelfTradePrevention"`
+	PreventSor                 bool            `json:"preventSor"`
+	Brokered                   bool            `json:"brokered"`
 }
 
 // Balance define user balance of your account
